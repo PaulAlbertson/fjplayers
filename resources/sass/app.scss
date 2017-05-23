@@ -1,0 +1,54 @@
+$body-bg-color: #000;
+ 
+$base-color: #9aa48e;
+$base-gradient: 'matte';
+$active-color: #FFFFFF;
+ 
+$tabs-dark: $base-color;
+$tabs-light: #FFFFFF;
+ 
+$tabs-bottom-radius: .4em;
+$tabs-bottom-gradient: 'bevel';
+$tabs-bar-gradient: 'matte';
+$tabs-bottom-active-gradient: 'recessed';
+ 
+$toolbar-gradient: 'matte';
+ 
+@import 'sencha-touch/default/all';
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet; 
+@include sencha-picker;
+@include sencha-toolbar-forms;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-carousel;
+@include sencha-indexbar;
+@include sencha-list;
+@include sencha-layout;
+@include sencha-form;
+//@include sencha-loading-spinner;
+ 
+ html body{background-color:#9aa48e; }
+ 
+#homeContainer{position:relative;  width:100%; margin-left:auto; margin-right:auto; padding:0px; }
+#introPageLogo{position:relative; width: 150px; margin-top: 100px; margin-left:auto; margin-right:auto;}
+#fjTweetViewButton{position:relative; margin-left:auto; margin-right:auto;}
+#fjLoginViewButton{position:relative; margin-left:auto; margin-right:auto;}
+#introPageCopyH1{font-size:20px; font-weight:bold;}
+#introPageCopy{position:relative; width: 100%; text-align:center;  padding:0px; font-size:12px; font-weight:normal;}
+
+.x-toolbar .x-toolbar-title {
+    color: saturate(lighten($active-color, 10%), 20%);
+    text-shadow: rgba(#fff, .8) 0 1px 20px;
+}
+ 
+.x-tab-active img {
+    background: white none !important;
+}
+ 
+.x-tabbar.x-docked-bottom .x-tab {
+    .x-tab-active {
+        -webkit-box-shadow: inset rgba(#000, .8) 0 0 5px !important;
+    }
+}

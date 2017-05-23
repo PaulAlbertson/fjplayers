@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>FJ Players App</title>
+    <style type="text/css">
+         /**
+         * Example of an initial loading indicator.
+         * It is recommended to keep this as minimal as possible to provide instant feedback
+         * while other resources are still being loaded for the first time
+         */
+        /* Linear gradient*/
+        /*html, body {
+            height: 100%;
+            background-color: #9aa48e;
+            background-image: linear-gradient(bottom, rgb(77,77,77) 0%, rgb(135,135,135) 63%, rgb(103,107,104) 100%);
+			background-image: -o-linear-gradient(bottom, rgb(77,77,77) 0%, rgb(135,135,135) 63%, rgb(103,107,104) 100%);
+			background-image: -moz-linear-gradient(bottom, rgb(77,77,77) 0%, rgb(135,135,135) 63%, rgb(103,107,104) 100%);
+			background-image: -webkit-linear-gradient(bottom, rgb(77,77,77) 0%, rgb(135,135,135) 63%, rgb(103,107,104) 100%);
+			background-image: -ms-linear-gradient(bottom, rgb(77,77,77) 0%, rgb(135,135,135) 63%, rgb(103,107,104) 100%);
+			background-image: -webkit-gradient(
+				linear,
+				left bottom,
+				left top,
+				color-stop(0, rgb(77,77,77)),
+				color-stop(0.63, rgb(135,135,135)),
+				color-stop(1, rgb(103,107,104))
+			);
+        }*/
+       /* Radial gradient*/
+        html, body {
+            height: 100%;
+            background-color: #aaaaaa;
+			background: -moz-radial-gradient(center, ellipse cover,  #aaaaaa 0%, #595959 100%); /* FF3.6+ */
+			background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#aaaaaa), color-stop(100%,#595959)); /* Chrome,Safari4+ */
+			background: -webkit-radial-gradient(center, ellipse cover,  #aaaaaa 0%,#595959 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-radial-gradient(center, ellipse cover,  #aaaaaa 0%,#595959 100%); /* Opera 12+ */
+			background: -ms-radial-gradient(center, ellipse cover,  #aaaaaa 0%,#595959 100%); /* IE10+ */
+			background: radial-gradient(ellipse at center,  #aaaaaa 0%,#595959 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaaaaa', endColorstr='#595959',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+        
+
+        #loadingContainer{
+        	width:100%; margin-left:auto; margin-right:auto; padding:0px; padding-top:20%;
+        }
+        #fjLoadingIcon{
+        	width:200px;
+        	margin-left:auto; margin-right:auto;
+        	/*top:20%;
+        	left:25%;*/
+        }
+
+        #appLoadingIndicator {
+            position: relative;
+            top: 80%;
+            margin-top: -15px;
+            text-align: center;
+            width: 100%;
+            height: 30px;
+            -webkit-animation-name: appLoadingIndicator;
+            -webkit-animation-duration: 0.5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: linear;
+        }
+
+        #appLoadingIndicator > * {
+            background-color: #FFFFFF;
+            display: inline-block;
+            height: 10px;
+            -webkit-border-radius: 5px;
+            margin: 0 4px;
+            width: 10px;
+            opacity: 0.8;
+        }
+
+        @-webkit-keyframes appLoadingIndicator{
+            0% {
+                opacity: 0.8
+            }
+            50% {
+                opacity: 0
+            }
+            100% {
+                opacity: 0.8
+            }
+        }
+    </style>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <!-- The line below must be kept intact for Sencha Command to build your application -->
+    <script id="microloader" type="text/javascript" src="touch/microloader/development.js"></script>
+</head>
+<body>
+	<div id="loadingContainer">
+		<div id="fjLoadingIcon"><img src="resources/images/fj_black_trans_200.png" /></div>
+	    <div id="appLoadingIndicator">
+	        <div></div>
+	        <div></div>
+	        <div></div>
+	        <div></div>
+	        <div></div>
+	        <div></div>
+	    </div>
+    </div>
+</body>
+</html>
